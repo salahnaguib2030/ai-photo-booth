@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+npm-debug.log*
+
+# Environment files (if using .env)
+.env
+.env.*
+
+# Vercel local
+.vercel
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log

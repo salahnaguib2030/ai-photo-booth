@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Photo Booth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ AI Photo Booth ✨</h1>
+            <p class="subtitle">Capture your moment and let AI transform it</p>
+        </header>
+
+        <main class="photo-booth">
+            <div class="camera-section">
+                <div class="video-container">
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                </div>
+                
+                <div class="controls">
+                    <button id="startCamera" class="btn btn-primary">
+                        <span class="icon">📷</span>
+                        Start Camera
+                    </button>
+                    <button id="captureBtn" class="btn btn-success" disabled>
+                        <span class="icon">📸</span>
+                        Capture Photo
+                    </button>
+                    <button id="retakeBtn" class="btn btn-secondary" style="display: none;">
+                        <span class="icon">🔄</span>
+                        Retake
+                    </button>
+                </div>
+                
+                <div class="style-selector-section">
+                    <label for="styleSelector">
+                        <span class="icon">🎨</span>
+                        Choose Style:
+                    </label>
+                    <select id="styleSelector" class="style-select">
+                        <option value="realistic">Realistic (Photorealistic)</option>
+                        <option value="disney">Disney (Pixar Style)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="preview-section">
+                <div class="photo-card">
+                    <h3>Original Photo</h3>
+                    <div id="originalPreview" class="photo-placeholder">
+                        <span class="placeholder-text">Your photo will appear here</span>
+                    </div>
+                </div>
+
+                <div class="arrow-divider">
+                    <span class="arrow">→</span>
+                </div>
+
+                <div class="photo-card">
+                    <h3>AI Enhanced Photo</h3>
+                    <div id="editedPreview" class="photo-placeholder">
+                        <span class="placeholder-text">AI edited photo will appear here</span>
+                    </div>
+                    <div id="loadingSpinner" class="spinner" style="display: none;">
+                        <div class="spinner-circle"></div>
+                        <p>AI is working its magic...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section" style="display: none;">
+                <button id="downloadBtn" class="btn btn-download">
+                    <span class="icon">⬇️</span>
+                    Download Edited Photo
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by n8n AI Workflows</p>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="imageProcessor.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
