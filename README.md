@@ -143,3 +143,4 @@ Return the image directly with `Content-Type: image/png` or `image/jpeg`
 ## License
 
 MIT
+# ai-photo-booth
