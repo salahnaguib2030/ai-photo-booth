@@ -7,7 +7,7 @@ npm-debug.log*
 .env.*
 
 # Config files with sensitive data
-config.js
+# config.js - Now tracked because it contains no secrets, only public API endpoints
 
 # Vercel local
 .vercel
