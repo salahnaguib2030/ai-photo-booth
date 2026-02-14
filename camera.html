@@ -3,42 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramadan AI Photo Booth</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ramadan AI Photo Booth - Camera</title>
+    <link rel="stylesheet" href="camera.css">
 </head>
 <body>
-    <!-- Welcome Screen -->
-    <div id="welcomeScreen" class="welcome-screen">
-        <div class="particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-        <div class="crescents">
-            <div class="crescent"></div>
-            <div class="crescent"></div>
-            <div class="crescent"></div>
-            <div class="crescent"></div>
-            <div class="crescent"></div>
-            <div class="crescent"></div>
-        </div>
-        <div class="glowing-portal">
-            <div class="portal-ring"></div>
-            <div class="portal-glow"></div>
-            <div class="tap-to-start">
-                <div class="tap-box">TAP TO START</div>
-            </div>
-        </div>
-    </div>
-
-    <script src="app.js"></script>
-</body>
-</html>
+    <!-- Camera Screen (Black Background, Full Width) -->
+    <main class="camera-screen">
+        <!-- Background Image -->
+        <div class="camera-background"></div>
+        
         <div class="particles">
             <div class="particle"></div>
             <div class="particle"></div>
@@ -50,19 +23,16 @@
             <div class="particle"></div>
         </div>
         
-        <div class="camera-portal">
-            <div class="portal-ring"></div>
-            <div class="portal-glow"></div>
-            
-            <!-- Video/Canvas Container -->
-            <div class="portal-content">
+        <div class="camera-container">
+            <!-- Video/Canvas Container (Full Width) -->
+            <div class="camera-content">
                 <video id="video" autoplay playsinline style="display: none;"></video>
                 <canvas id="outputCanvas" style="display: none;"></canvas>
                 <canvas id="canvas" style="display: none;"></canvas>
             </div>
             
-            <!-- Start Camera Button -->
-            <div id="startCamera" class="tap-to-start">
+            <!-- Start Camera Button (hidden, only shows if auto-start fails) -->
+            <div id="startCamera" class="action-button" style="display: none;">
                 <div class="tap-box">TAP TO START</div>
             </div>
             
@@ -82,7 +52,7 @@
             </div>
             
             <!-- Style Selector (appears after capture before approve) -->
-            <div id="styleSelector" class="style-selector-portal" style="display: none;">
+            <div id="styleSelector" class="style-selector-fullwidth" style="display: none;">
                 <div class="style-option" data-style="realistic">
                     <div class="tap-box-small">REALISTIC</div>
                 </div>
@@ -107,12 +77,12 @@
             <!-- Loading Spinner -->
             <div id="loadingSpinner" class="spinner-overlay" style="display: none;">
                 <div class="spinner-circle"></div>
-                <p class="loading-text">AI is creating your masterpiece...</p>
+                <p class="loading-text">please wait a moment while AI does it's magic</p>
             </div>
         </div>
     </main>
 
     <script src="config.js"></script>
-    <script src="app.js"></script>
+    <script src="camera.js"></script>
 </body>
 </html>

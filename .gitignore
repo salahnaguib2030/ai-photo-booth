@@ -6,6 +6,9 @@ npm-debug.log*
 .env
 .env.*
 
+# Config files with sensitive data
+config.js
+
 # Vercel local
 .vercel
 
