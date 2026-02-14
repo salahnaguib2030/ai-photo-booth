@@ -188,7 +188,7 @@ body {
 /* Action Buttons */
 .action-button {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 15;
@@ -267,7 +267,7 @@ body {
 /* Approve Controls */
 .approve-controls {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -279,7 +279,7 @@ body {
 /* Style Selector */
 .style-selector-fullwidth {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -313,7 +313,7 @@ body {
 /* Result Controls */
 .result-controls {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
