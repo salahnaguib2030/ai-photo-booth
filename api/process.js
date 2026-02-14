@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const N8N_WEBHOOK_URL = 'https://naguibdev.app.n8n.cloud/webhook/photo-booth';
+        const N8N_WEBHOOK_URL = 'https://naguibdev.app.n8n.cloud/webhook/phto-booth';
         
         console.log('📸 Proxying request to n8n webhook...');
         

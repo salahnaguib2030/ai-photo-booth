@@ -311,8 +311,15 @@ async function processImageWithRamadanBackground(imageBlob) {
         console.log('Response status:', response.status);
         
         if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(`Backend API error: ${response.status} - ${errorData.error || errorData.message}`);
+            const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+            console.error('Backend API error:', errorData);
+            
+            // If backend returns 404, it means n8n webhook doesn't exist
+            if (response.status === 404) {
+                throw new Error(`n8n webhook not found (404). Please check:\n1. Your n8n workflow is active\n2. Webhook URL is correct: ${CONFIG.N8N_WEBHOOK_URL}\n3. The workflow has a "Webhook" trigger node`);
+            }
+            
+            throw new Error(`Backend API error: ${response.status} - ${errorData.error || errorData.message || errorData.details}`);
         }
         
         // Parse JSON response
