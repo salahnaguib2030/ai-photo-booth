@@ -149,12 +149,12 @@ body {
 
 .camera-content {
     position: absolute;
-    width: calc(100% - 500px);
-    height: calc(100% - 370px);
-    left: 250px;
-    right: 250px;
-    top: 185px;
-    bottom: 185px;
+    width: calc(100% - 550px);
+    height: calc(100% - 320px);
+    left: 275px;
+    right: 275px;
+    top: 160px;
+    bottom: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
